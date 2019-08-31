@@ -25,32 +25,17 @@ namespace SportsStore.Controllers
 
         public ViewResult List(Category category, int productPage = 1)
         {
-            var items = repository.Products
-                    .Where(p => category == null 
-                        || p.ProductCategory.CategoryID == category.CategoryID);
-
-            var productsItems = items
+            var products = repository.Products
+                    .Where(p => category == null || p.ProductCategory.CategoryID == category.CategoryID)
                     .OrderBy(p => p.ProductID)
                     .Skip((productPage - 1) * PageSize)
                     .Take(PageSize);
-
-            IEnumerable<Product> products;
-            int totalItems = 0;
-
-            try
-            {
-                products = productsItems.ToList();
-                totalItems = items.Count();
-            } catch (Exception ex)
-            {
-                products = new LinkedList<Product>();
-            }
 
             var pagingInfo = new PagingInfo
             {
                 CurrentPage = productPage,
                 ItemsPerPage = PageSize,
-                TotalItems = totalItems
+                TotalItems = products.Count()
             };
 
             return View(new ProductsListViewModel

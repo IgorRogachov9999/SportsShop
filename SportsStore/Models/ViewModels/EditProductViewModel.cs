@@ -12,6 +12,5 @@ namespace SportsStore.Models.ViewModels
 
         public IEnumerable<Category> AllCategories { get; set; }
 
-        public int SomeWTF { get; set; }
     }
 }

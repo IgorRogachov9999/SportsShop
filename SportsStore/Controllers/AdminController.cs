@@ -25,26 +25,14 @@ namespace SportsStore.Controllers
 
         public ViewResult Index()
         {
-            IEnumerable<Product> products;
-
-            try
-            {
-                products = repository.Products.ToList();
-            } 
-            catch (Exception ex)
-            {
-                products = new LinkedList<Product>();
-            }
-
-            return View(products);
+            return View(repository.Products);
         }
 
         public ViewResult Edit(int productId) =>
            View(new EditProductViewModel {
                Product = repository.Products
                     .FirstOrDefault(p => p.ProductID == productId),
-               AllCategories = categoryRepository.Categories.ToList(),
-               SomeWTF = 0
+               AllCategories = categoryRepository.Categories
            });
 
         [HttpPost]
@@ -62,8 +50,7 @@ namespace SportsStore.Controllers
                 return View(new EditProductViewModel
                 {
                     Product = product,
-                    AllCategories = categoryRepository.Categories,
-                    SomeWTF = 0
+                    AllCategories = categoryRepository.Categories
                 });
             }
         }
