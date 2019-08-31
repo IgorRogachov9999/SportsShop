@@ -40,6 +40,20 @@ namespace SportsStore.Migrations
                     b.ToTable("CartLine");
                 });
 
+            modelBuilder.Entity("SportsStore.Models.Models.Category", b =>
+                {
+                    b.Property<int>("CategoryID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired();
+
+                    b.HasKey("CategoryID");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("SportsStore.Models.Order", b =>
                 {
                     b.Property<int>("OrderID")
@@ -82,15 +96,19 @@ namespace SportsStore.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Category");
+                    b.Property<string>("Description")
+                        .IsRequired();
 
-                    b.Property<string>("Description");
-
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<decimal>("Price");
 
+                    b.Property<int>("ProductCategoryCategoryID");
+
                     b.HasKey("ProductID");
+
+                    b.HasIndex("ProductCategoryCategoryID");
 
                     b.ToTable("Products");
                 });
@@ -104,6 +122,14 @@ namespace SportsStore.Migrations
                     b.HasOne("SportsStore.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductID");
+                });
+
+            modelBuilder.Entity("SportsStore.Models.Product", b =>
+                {
+                    b.HasOne("SportsStore.Models.Models.Category", "ProductCategory")
+                        .WithMany()
+                        .HasForeignKey("ProductCategoryCategoryID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

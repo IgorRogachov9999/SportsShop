@@ -19,17 +19,22 @@ using SportsStore.Models;
 #line default
 #line hidden
 #line 2 "C:\Users\igor\source\repos\SportsStore\SportsStore\Views\_ViewImports.cshtml"
-using SportsStore.Models.ViewModels;
+using SportsStore.Models.Models;
 
 #line default
 #line hidden
 #line 3 "C:\Users\igor\source\repos\SportsStore\SportsStore\Views\_ViewImports.cshtml"
+using SportsStore.Models.ViewModels;
+
+#line default
+#line hidden
+#line 4 "C:\Users\igor\source\repos\SportsStore\SportsStore\Views\_ViewImports.cshtml"
 using SportsStore.Infrastructere;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"83fc4bb46c1d582899640fe4fb33eebb461a2361", @"/Views/Cart/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e3c30be96dff1f1e9bd233bd587693cea5ec4f78", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"58cbcf63ad6f7a1f3de4b76338919bfbd94778d1", @"/Views/_ViewImports.cshtml")]
     public class Views_Cart_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<CartIndexViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "RemoveFromCart", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -125,7 +130,7 @@ using SportsStore.Infrastructere;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(749, 447, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83fc4bb46c1d582899640fe4fb33eebb461a23617449", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83fc4bb46c1d582899640fe4fb33eebb461a23617602", async() => {
                 BeginContext(797, 59, true);
                 WriteLiteral("\r\n                    <input type=\"hidden\" name=\"ProductID\"");
                 EndContext();
@@ -199,7 +204,7 @@ WriteAttributeValue("", 1566, Model.ReturnUrl, 1566, 16, false);
             WriteLiteral(">Continue shopping</a>\r\n    ");
             EndContext();
             BeginContext(1611, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83fc4bb46c1d582899640fe4fb33eebb461a236111844", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "83fc4bb46c1d582899640fe4fb33eebb461a236111997", async() => {
                 BeginContext(1683, 24, true);
                 WriteLiteral("\r\n        Checkout\r\n    ");
                 EndContext();

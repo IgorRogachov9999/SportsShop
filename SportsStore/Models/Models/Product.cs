@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportsStore.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -22,6 +23,6 @@ namespace SportsStore.Models
         public decimal Price { get; set; }
 
         [Required(ErrorMessage = "Please specify a category")]
-        public string Category { get; set; }
+        public Category ProductCategory { get; set; }
     }
 }

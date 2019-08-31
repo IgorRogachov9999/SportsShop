@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SportsStore.Models;
+using SportsStore.Models.Repositories;
+using SportsStore.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +15,12 @@ namespace SportsStore.Controllers
     {
         private IProductRepository repository;
 
-        public AdminController(IProductRepository repo)
+        private ICategoryRepository categoryRepository;
+
+        public AdminController(IProductRepository repo, ICategoryRepository categoryRepository)
         {
             repository = repo;
+            this.categoryRepository = categoryRepository;
         }
 
         public ViewResult Index()
@@ -35,8 +40,12 @@ namespace SportsStore.Controllers
         }
 
         public ViewResult Edit(int productId) =>
-           View(repository.Products
-               .FirstOrDefault(p => p.ProductID == productId));
+           View(new EditProductViewModel {
+               Product = repository.Products
+                    .FirstOrDefault(p => p.ProductID == productId),
+               AllCategories = categoryRepository.Categories.ToList(),
+               SomeWTF = 0
+           });
 
         [HttpPost]
         public IActionResult Edit(Product product)
@@ -50,7 +59,12 @@ namespace SportsStore.Controllers
             else
             {
                 // there is something wrong with the data values
-                return View(product);
+                return View(new EditProductViewModel
+                {
+                    Product = product,
+                    AllCategories = categoryRepository.Categories,
+                    SomeWTF = 0
+                });
             }
         }
 

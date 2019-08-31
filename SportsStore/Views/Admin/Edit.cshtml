@@ -1,29 +1,33 @@
-﻿@model Product
+﻿@model EditProductViewModel
 @{
     ViewBag.Title = "Edit Product";
     Layout = "_AdminLayout";
 }
 <form asp-action="Edit" method="post">
-    <input type="hidden" asp-for="ProductID" />
+    <input type="hidden" asp-for="Product.ProductID" />
     <div class="form-group">
-        <label asp-for="Name"></label>
-        <div><span asp-validation-for="Name" class="text-danger"></span></div>
-        <input asp-for="Name" class="form-control" />
+        <label asp-for="Product.Name"></label>
+        <div><span asp-validation-for="Product.Name" class="text-danger"></span></div>
+        <input asp-for="Product.Name" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="Description"></label>
-        <div><span asp-validation-for="Description" class="text-danger"></span></div>
-        <textarea asp-for="Description" class="form-control"></textarea>
+        <label asp-for="Product.Description"></label>
+        <div><span asp-validation-for="Product.Description" class="text-danger"></span></div>
+        <textarea asp-for="Product.Description" class="form-control"></textarea>
     </div>
     <div class="form-group">
-        <label asp-for="Category"></label>
-        <div><span asp-validation-for="Category" class="text-danger"></span></div>
-        <input asp-for="Category" class="form-control" />
+        <label asp-for="Product.ProductCategory"></label>
+        <select asp-for="Product.ProductCategory" asp-validation-for="Product.ProductCategory" class="custom-select">
+            @foreach (var category in Model.AllCategories)
+            {
+                <option value="@category.CategoryID">@category.Name</option>
+            }
+        </select>
     </div>
     <div class="form-group">
-        <label asp-for="Price"></label>
-        <div><span asp-validation-for="Category" class="text-danger"></span></div>
-        <input asp-for="Price" class="form-control" />
+        <label asp-for="Product.Price"></label>
+        <div><span asp-validation-for="Product.Price" class="text-danger"></span></div>
+        <input asp-for="Product.Price" class="form-control" />
     </div>
     <div class="text-center">
         <button class="btn btn-primary" type="submit">Save</button>

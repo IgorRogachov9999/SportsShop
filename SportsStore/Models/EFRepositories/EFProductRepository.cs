@@ -31,7 +31,7 @@ namespace SportsStore.Models
                     dbEntry.Name = product.Name;
                     dbEntry.Description = product.Description;
                     dbEntry.Price = product.Price;
-                    dbEntry.Category = product.Category;
+                    dbEntry.ProductCategory = product.ProductCategory;
                 }
             }
             context.SaveChanges();

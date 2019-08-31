@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SportsStore.Models;
+using SportsStore.Models.Models;
+using SportsStore.Models.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,29 +13,27 @@ namespace SportsStore.Components
     {
         private IProductRepository repository;
 
-        public NavigationMenuViewComponent(IProductRepository repo)
+        private ICategoryRepository categoryRepository;
+
+        public NavigationMenuViewComponent(IProductRepository repo, ICategoryRepository categoryRepository)
         {
             repository = repo;
+            this.categoryRepository = categoryRepository;
         }
 
         public IViewComponentResult Invoke()
         {
             ViewBag.SelectedCategory = RouteData?.Values["category"];
 
-            var categoriesItems = repository.Products
-                .Select(x => x.Category)
-                .Distinct()
-                .OrderBy(x => x);
-
-            IEnumerable<string> categories;
+            IEnumerable<Category> categories;
 
             try
             {
-                categories = categoriesItems.ToList();
+                categories = categoryRepository.Categories.ToList();
             }
             catch (Exception ex)
             {
-                categories = new LinkedList<string>();
+                categories = new LinkedList<Category>();
             }
 
             return View(categories);

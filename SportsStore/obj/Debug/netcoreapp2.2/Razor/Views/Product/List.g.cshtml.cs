@@ -19,17 +19,22 @@ using SportsStore.Models;
 #line default
 #line hidden
 #line 2 "C:\Users\igor\source\repos\SportsStore\SportsStore\Views\_ViewImports.cshtml"
-using SportsStore.Models.ViewModels;
+using SportsStore.Models.Models;
 
 #line default
 #line hidden
 #line 3 "C:\Users\igor\source\repos\SportsStore\SportsStore\Views\_ViewImports.cshtml"
+using SportsStore.Models.ViewModels;
+
+#line default
+#line hidden
+#line 4 "C:\Users\igor\source\repos\SportsStore\SportsStore\Views\_ViewImports.cshtml"
 using SportsStore.Infrastructere;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c6714dafe8e390a842d4a6a3c85ef01f2dade49b", @"/Views/Product/List.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e3c30be96dff1f1e9bd233bd587693cea5ec4f78", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"58cbcf63ad6f7a1f3de4b76338919bfbd94778d1", @"/Views/_ViewImports.cshtml")]
     public class Views_Product_List : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ProductsListViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "List", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -92,7 +97,7 @@ Write(Html.Partial("ProductSummary", p));
             WriteLiteral("    ");
             EndContext();
             BeginContext(163, 201, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6714dafe8e390a842d4a6a3c85ef01f2dade49b4944", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6714dafe8e390a842d4a6a3c85ef01f2dade49b5097", async() => {
                 BeginContext(340, 20, true);
                 WriteLiteral("\r\n        Back\r\n    ");
                 EndContext();
@@ -151,7 +156,7 @@ Write(Html.Partial("ProductSummary", p));
             WriteLiteral("    ");
             EndContext();
             BeginContext(442, 201, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6714dafe8e390a842d4a6a3c85ef01f2dade49b8489", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c6714dafe8e390a842d4a6a3c85ef01f2dade49b8642", async() => {
                 BeginContext(619, 20, true);
                 WriteLiteral("\r\n        Next\r\n    ");
                 EndContext();
