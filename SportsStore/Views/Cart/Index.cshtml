@@ -1,4 +1,5 @@
 ﻿@model CartIndexViewModel
+
 <h2>Your cart</h2>
 <table class="table table-bordered table-striped">
     <thead>
@@ -7,9 +8,10 @@
             <th class="text-left">Item</th>
             <th class="text-left">Price</th>
             <th class="text-left">Subtotal</th>
+            <th class="text-left">Action</th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="lines">
         @foreach (var line in Model.Cart.Lines)
         {
         <tr>
@@ -20,15 +22,11 @@
                 @((line.Quantity * line.Product.Price).ToString("c"))
             </td>
             <td>
-                <form asp-action="RemoveFromCart" method="post">
-                    <input type="hidden" name="ProductID"
-                           value="@line.Product.ProductID" />
-                    <input type="hidden" name="returnUrl"
-                           value="@Model.ReturnUrl" />
-                    <button type="submit" class="btn btn-sm btn-danger">
+                <div>
+                    <button id="@line.Product.ProductID" class="btn btn-sm btn-danger remove-from-cart">
                         Remove
                     </button>
-                </form>
+                </div>
             </td>
         </tr>
         }
@@ -36,7 +34,7 @@
     <tfoot>
         <tr>
             <td colspan="3" class="text-right">Total:</td>
-            <td class="text-right">
+            <td class="text-center total-price">
                 @Model.Cart.ComputeTotalValue().ToString("c")
             </td>
         </tr>
@@ -48,3 +46,47 @@
         Checkout
     </a>
 </div>
+
+<script>
+        function displayData(data) {
+            var totalPrice = 0;
+            var newCode = "";
+
+            data.lines.forEach(function (line) {
+                var lineQuantity = parseFloat(line.quantity) * parseFloat(line.product.price)
+                totalPrice += lineQuantity
+
+                newCode += '<tr>';
+                newCode += '<td class="text-center">' + line.quantity + '</td>'
+                newCode += '<td class="text-center">' + line.product.name + '</td>'
+                newCode += '<td class="text-center">' + currency(parseFloat(line.product.price).toFixed(2), { formatWithSymbol: true }).format() + '</td>'
+                newCode += '<td class="text-center">' + currency(lineQuantity.toFixed(2), { formatWithSymbol: true }).format() + '</td>'
+                newCode += '<td>'
+                newCode += '<div>'
+                newCode += '<button id="' + line.product.productID +'" class="btn btn-sm btn-danger remove-from-cart">Remove</button></div></td></tr>'
+
+            });
+
+            totalPrice = currency(totalPrice.toFixed(2), { formatWithSymbol: true }).format()
+
+            document.getElementsByClassName('total-price')[0].innerHTML = totalPrice
+            document.getElementsByClassName('lines')[0].innerHTML = newCode
+        }
+
+    $(document).ready(function () {
+        $(".lines").on("click", ".remove-from-cart", function () {
+            var id = $(this).attr("id");
+            
+            $.ajax({
+                url: "/api/Cart/" + id,
+                type: "DELETE",
+                error: function (err) {
+                    console.log(err);
+                },
+                success: function (result) {
+                    displayData(result);
+                }
+            });
+        });
+    });
+</script>

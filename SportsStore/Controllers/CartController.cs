@@ -39,11 +39,11 @@ namespace SportsStore.Controllers
             {
                 cart.AddItem(product, 1);
             }
+            
             return RedirectToAction("Index", new { returnUrl });
         }
 
-        public RedirectToActionResult RemoveFromCart(int productId,
-                string returnUrl)
+        public RedirectToActionResult RemoveFromCart(int productId, string returnUrl)
         {
             Product product = repository.Products
                 .FirstOrDefault(p => p.ProductID == productId);
