@@ -1,0 +1,25 @@
+﻿@model ProductsListViewModel
+
+@foreach (var p in Model.Products)
+{
+    @Html.Partial("ProductSummary", p)
+}
+
+@if (Model.PagingInfo.CurrentPage > 1)
+{
+    <a asp-action="List"
+       asp-route-productPage="@(Model.PagingInfo.CurrentPage - 1)"
+       asp-route-category="@Model.CurrentCategory"
+       class="btn btn-primary btn">
+        Back
+    </a>
+}
+@if (Model.PagingInfo.CurrentPage < Model.PagingInfo.TotalPages)
+{
+    <a asp-action="List"
+       asp-route-productPage="@(Model.PagingInfo.CurrentPage + 1)"
+       asp-route-category="@Model.CurrentCategory"
+       class="btn btn-primary btn">
+        Next
+    </a>
+}
