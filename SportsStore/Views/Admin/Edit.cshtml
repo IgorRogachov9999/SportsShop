@@ -20,7 +20,7 @@
         <select asp-for="Product.ProductCategory" asp-validation-for="Product.ProductCategory" class="custom-select">
             @foreach (var category in Model.AllCategories)
             {
-                <option value="@category.CategoryID">@category.Name</option>
+                <option value=@category.Name>@category.Name</option>
             }
         </select>
     </div>

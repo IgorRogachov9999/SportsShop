@@ -23,20 +23,7 @@ namespace SportsStore.Components
 
         public IViewComponentResult Invoke()
         {
-            ViewBag.SelectedCategory = RouteData?.Values["category"];
-
-            IEnumerable<Category> categories;
-
-            try
-            {
-                categories = categoryRepository.Categories.ToList();
-            }
-            catch (Exception ex)
-            {
-                categories = new LinkedList<Category>();
-            }
-
-            return View(categories);
+            return View(categoryRepository.Categories);
         }
 
     }

@@ -36,3 +36,6 @@ C:\Users\igor\source\repos\SportsStore\SportsStore\bin\Debug\netcoreapp2.2\Sport
 C:\Users\igor\source\repos\SportsStore\SportsStore\bin\Debug\netcoreapp2.2\SportsStore.Views.pdb
 C:\Users\igor\source\repos\SportsStore\SportsStore\obj\Debug\netcoreapp2.2\SportsStore.Views.pdb
 C:\Users\igor\source\repos\SportsStore\SportsStore\obj\Debug\netcoreapp2.2\SportsStore.csproj.CopyComplete
+C:\Users\igor\source\repos\SportsStore\SportsStore\obj\Debug\netcoreapp2.2\Razor\Views\AdminCategory\Edit.g.cshtml.cs
+C:\Users\igor\source\repos\SportsStore\SportsStore\obj\Debug\netcoreapp2.2\Razor\Views\AdminCategory\Index.g.cshtml.cs
+C:\Users\igor\source\repos\SportsStore\SportsStore\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\AdminNavigationMenu\Default.g.cshtml.cs

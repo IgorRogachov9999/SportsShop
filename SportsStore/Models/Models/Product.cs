@@ -22,7 +22,7 @@ namespace SportsStore.Models
             ErrorMessage = "Please enter a positive price")]
         public decimal Price { get; set; }
 
-        [Required(ErrorMessage = "Please specify a category")]
-        public Category ProductCategory { get; set; }
+        [Required(ErrorMessage = "Please enter a category")]
+        public string ProductCategory { get; set; }
     }
 }

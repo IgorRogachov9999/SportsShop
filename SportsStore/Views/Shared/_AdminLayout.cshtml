@@ -19,7 +19,14 @@
     {
         <div class="alert alert-success">@TempData["message"]</div>
     }
-    @RenderBody()
+    <div class="row m-1 p-1">
+        <div id="funtions" class="col-3">
+            @await Component.InvokeAsync("AdminNavigationMenu")
+        </div>
+        <div class="col-9">
+            @RenderBody()
+        </div>
+    </div>
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/jquery.validate.min.js"></script>

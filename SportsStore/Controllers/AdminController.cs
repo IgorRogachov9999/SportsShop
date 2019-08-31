@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SportsStore.Models;
+using SportsStore.Models.Models;
 using SportsStore.Models.Repositories;
 using SportsStore.Models.ViewModels;
 using System;
@@ -28,12 +29,16 @@ namespace SportsStore.Controllers
             return View(repository.Products);
         }
 
-        public ViewResult Edit(int productId) =>
-           View(new EditProductViewModel {
-               Product = repository.Products
+        public ViewResult Edit(int productId)
+        {
+            return View(new EditProductViewModel
+            {
+                Product = repository.Products
                     .FirstOrDefault(p => p.ProductID == productId),
-               AllCategories = categoryRepository.Categories
-           });
+                AllCategories = categoryRepository.Categories
+            });
+        }
+           
 
         [HttpPost]
         public IActionResult Edit(Product product)
@@ -46,7 +51,6 @@ namespace SportsStore.Controllers
             }
             else
             {
-                // there is something wrong with the data values
                 return View(new EditProductViewModel
                 {
                     Product = product,
@@ -55,9 +59,12 @@ namespace SportsStore.Controllers
             }
         }
 
-        public ViewResult Create() => View("Edit", new Product());
+        public ViewResult Create() => View("Edit", new EditProductViewModel {
+            Product = new Product(),
+            AllCategories = categoryRepository.Categories
+        });
 
-        [HttpPost]
+        [HttpPost]  
         public IActionResult Delete(int productId)
         {
             Product deletedProduct = repository.DeleteProduct(productId);

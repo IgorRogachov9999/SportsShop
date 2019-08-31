@@ -10,6 +10,8 @@ namespace SportsStore.Models.Repositories
     {
         IQueryable<Category> Categories { get; }
 
-        bool IsUnique(string name);
+        void SaveCategory(Category category);
+
+        Category DelteCategory(int categoryID);
     }
 }

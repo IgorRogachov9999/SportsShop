@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SportsStore.Models;
 
 namespace SportsStore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190831131252_CategoryNullAllow")]
+    partial class CategoryNullAllow
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -104,10 +106,11 @@ namespace SportsStore.Migrations
 
                     b.Property<decimal>("Price");
 
-                    b.Property<string>("ProductCategory")
-                        .IsRequired();
+                    b.Property<int?>("ProductCategoryCategoryID");
 
                     b.HasKey("ProductID");
+
+                    b.HasIndex("ProductCategoryCategoryID");
 
                     b.ToTable("Products");
                 });
@@ -121,6 +124,13 @@ namespace SportsStore.Migrations
                     b.HasOne("SportsStore.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductID");
+                });
+
+            modelBuilder.Entity("SportsStore.Models.Product", b =>
+                {
+                    b.HasOne("SportsStore.Models.Models.Category", "ProductCategory")
+                        .WithMany()
+                        .HasForeignKey("ProductCategoryCategoryID");
                 });
 #pragma warning restore 612, 618
         }
