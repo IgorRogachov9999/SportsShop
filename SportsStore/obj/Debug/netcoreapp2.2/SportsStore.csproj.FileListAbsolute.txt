@@ -1,4 +1,3 @@
-C:\Users\igor\source\repos\SportsStore\SportsStore\obj\Debug\netcoreapp2.2\SportsStore.csprojAssemblyReference.cache
 C:\Users\igor\source\repos\SportsStore\SportsStore\obj\Debug\netcoreapp2.2\SportsStore.csproj.CoreCompileInputs.cache
 C:\Users\igor\source\repos\SportsStore\SportsStore\obj\Debug\netcoreapp2.2\SportsStore.RazorAssemblyInfo.cache
 C:\Users\igor\source\repos\SportsStore\SportsStore\obj\Debug\netcoreapp2.2\SportsStore.RazorAssemblyInfo.cs

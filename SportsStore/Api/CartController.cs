@@ -41,7 +41,7 @@ namespace SportsStore.Api
         }
 
         [HttpDelete("{productId}")]
-        public ActionResult<Cart> DeleteProductFromCart(int productId)
+        public Cart DeleteProductFromCart(int productId)
         {
             Product product = _repository.Products
                 .FirstOrDefault(p => p.ProductID == productId);

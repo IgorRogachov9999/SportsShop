@@ -1,0 +1,9 @@
+<a class="btn btn-block btn-primary" routerLink="cart">
+    Cart
+</a>
+<a class="btn btn-block btn-primary" routerLink="/">
+    Home
+</a>
+<a *ngFor="let category of categories" class="btn btn-block btn-secondary" routerLink="category" (click)="selectCategory(category.name)">
+    {{category.name}}
+</a>

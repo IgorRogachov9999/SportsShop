@@ -42,6 +42,7 @@ namespace SportsStore
             services.AddTransient<ICategoryRepository, EFCategoryRepository>();
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddCors();
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();
@@ -60,6 +61,10 @@ namespace SportsStore
                 app.UseExceptionHandler("/Error");
             }
 
+            app.UseCors(
+                options => options.WithOrigins("http://localhost:4200", "https://reqbin.com/").AllowAnyMethod()
+            );
+            app.UseCors(builder => builder.AllowAnyOrigin());
             app.UseStaticFiles();
             app.UseStatusCodePages();
             app.UseSession();
