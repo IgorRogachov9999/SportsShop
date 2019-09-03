@@ -23,19 +23,25 @@ namespace SportsStore.Api
         [HttpGet]
         public IEnumerable<Order> Get()
         {
+            Console.WriteLine("get..............................................");
             return _repository.Orders;
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]Order order)
+        public IActionResult Post([FromBody] Order order)
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Order");
-            Console.WriteLine(order.ToString());
-            Console.WriteLine("Order");
-            Console.ForegroundColor = ConsoleColor.Gray;
+            if (!ModelState.IsValid || order.Lines.Count == 0)
+            {
+                return BadRequest(ModelState);
+            }
 
-            return NoContent();
+            order.Lines = order.Lines.ToArray();
+            order.OrderID = _repository.Orders.Last().OrderID + 1;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(order.OrderID);
+            Console.ForegroundColor = ConsoleColor.Gray;
+            // _repository.SaveOrder(order);
+            return Ok();
         }
 
     }

@@ -22,11 +22,25 @@ namespace SportsStore
 
         public IConfiguration Configuration { get; }
 
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:4200")
+                        .AllowAnyOrigin()
+                        .AllowCredentials()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
+
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
 
@@ -37,7 +51,7 @@ namespace SportsStore
                 .AddEntityFrameworkStores<AppIdentityDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddTransient<IProductRepository, EFProductRepository>();
+            services.AddScoped<IProductRepository, EFProductRepository>();
             services.AddTransient<IOrderRepository, EFOrderRepository>();
             services.AddTransient<ICategoryRepository, EFCategoryRepository>();
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
@@ -61,9 +75,11 @@ namespace SportsStore
                 app.UseExceptionHandler("/Error");
             }
 
-            app.UseCors(
+            app.UseCors(MyAllowSpecificOrigins);
+
+            /*app.UseCors(
                 options => options.WithOrigins("http://localhost:4200", "https://reqbin.com/").AllowAnyMethod()
-            );
+            );*/
             app.UseCors(builder => builder.AllowAnyOrigin());
             app.UseStaticFiles();
             app.UseStatusCodePages();

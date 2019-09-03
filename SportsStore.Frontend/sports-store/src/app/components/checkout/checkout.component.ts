@@ -36,16 +36,18 @@ export class CheckoutComponent implements OnInit {
    checkout() {
     var value = this.checkoutForm.value;
     var order: Order = {
-      orderID: 100,
+      orderID: 0,
       lines: this.cartService.getCart().lines,
       shipped: false,
       name: value.name,
       address: value.address,
-      city: value.sity,
+      city: value.city,
       country: value.country
     };
-    this.checkoutService.postOrder(order);
-    console.log("posted");
+    this.checkoutService.postOrder(order).subscribe(
+      value => console.log(value),
+      error => console.error(error)
+    );
    }
 
   ngOnInit() {

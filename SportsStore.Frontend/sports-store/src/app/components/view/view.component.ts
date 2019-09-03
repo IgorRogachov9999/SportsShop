@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../cart/cart.service'
 import { ProductService } from './product.service';
 import { CategoryService } from '../nav-bar/category.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-view',
@@ -16,9 +16,10 @@ export class ViewComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private categoryService: CategoryService,
-    private router : Router
+    private route: ActivatedRoute
     ) {
-        this.updateProductViewModel(null, 1);
+      var name = this.route.snapshot.params['name'];
+      this.updateProductViewModel(name, 1);
   }
 
   ngOnInit() {
@@ -26,7 +27,6 @@ export class ViewComponent implements OnInit {
   }
 
   updateProductViewModel(category: string, page: number) {
-    console.log(category, page);
     this.productService.getProducts(category, page).subscribe(
       value => this.productViewModel = <ProductViewModel>value,
       error => console.error(error) 
