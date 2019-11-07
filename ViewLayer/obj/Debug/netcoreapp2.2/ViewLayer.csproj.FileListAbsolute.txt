@@ -1,0 +1,9 @@
+C:\Users\igor\Source\Repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\ViewLayer.deps.json
+C:\Users\igor\Source\Repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\ViewLayer.dll
+C:\Users\igor\Source\Repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\ViewLayer.pdb
+C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.csprojAssemblyReference.cache
+C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.csproj.CoreCompileInputs.cache
+C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.AssemblyInfoInputs.cache
+C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.AssemblyInfo.cs
+C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.dll
+C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.pdb

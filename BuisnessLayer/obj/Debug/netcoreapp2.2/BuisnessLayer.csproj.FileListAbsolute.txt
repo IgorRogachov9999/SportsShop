@@ -1,0 +1,9 @@
+C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.deps.json
+C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.dll
+C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.pdb
+C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.csprojAssemblyReference.cache
+C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.csproj.CoreCompileInputs.cache
+C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.AssemblyInfoInputs.cache
+C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.AssemblyInfo.cs
+C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.dll
+C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.pdb
