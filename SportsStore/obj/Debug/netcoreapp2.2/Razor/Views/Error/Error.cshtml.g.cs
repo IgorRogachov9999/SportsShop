@@ -14,27 +14,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #line 1 "C:\Users\rogachov\Source\Repos\SportsShop\SportsStore\Views\_ViewImports.cshtml"
-using DataLayer;
+using BuisnessLayer;
 
 #line default
 #line hidden
 #line 2 "C:\Users\rogachov\Source\Repos\SportsShop\SportsStore\Views\_ViewImports.cshtml"
-using DataLayer.Entityes;
+using BuisnessLayer.Entityes;
 
 #line default
 #line hidden
 #line 3 "C:\Users\rogachov\Source\Repos\SportsShop\SportsStore\Views\_ViewImports.cshtml"
-using ViewLayer.ViewModels;
+using BuisnessLayer.Models;
 
 #line default
 #line hidden
 #line 4 "C:\Users\rogachov\Source\Repos\SportsShop\SportsStore\Views\_ViewImports.cshtml"
-using ViewLayer.Infrastructure;
+using BuisnessLayer.Infrastructure;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a535aa555e2c5edfd713b873e5539ff4ef51037", @"/Views/Error/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4e60e32e9035e209328be4310d43ac8f6970d984", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"072b6c87c89ad87b31db40d83ec7f25c91ddcc17", @"/Views/_ViewImports.cshtml")]
     public class Views_Error_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("rel", new global::Microsoft.AspNetCore.Html.HtmlString("stylesheet"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -73,12 +73,12 @@ using ViewLayer.Infrastructure;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(52, 181, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a535aa555e2c5edfd713b873e5539ff4ef510374686", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a535aa555e2c5edfd713b873e5539ff4ef510374698", async() => {
                 BeginContext(58, 65, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    ");
                 EndContext();
                 BeginContext(123, 75, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8a535aa555e2c5edfd713b873e5539ff4ef510375136", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8a535aa555e2c5edfd713b873e5539ff4ef510375148", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -112,7 +112,7 @@ using ViewLayer.Infrastructure;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(235, 139, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a535aa555e2c5edfd713b873e5539ff4ef510377293", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a535aa555e2c5edfd713b873e5539ff4ef510377305", async() => {
                 BeginContext(241, 126, true);
                 WriteLiteral("\r\n    <h2 class=\"text-danger\">Error.</h2>\r\n    <h3 class=\"text-danger\">An error occurred while processing your request.</h3>\r\n");
                 EndContext();

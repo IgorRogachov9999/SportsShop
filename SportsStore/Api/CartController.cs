@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using BuisnessLayer.Repositories;
-using ViewLayer.ViewModels;
-using ViewLayer;
-using ViewLayer.Services;
+using BuisnessLayer.Models;
+using BuisnessLayer.Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,7 +22,10 @@ namespace SportsStore.Api
         }
 
         [HttpGet]
-        public ActionResult<Cart> GetCart() => cartService.GetCart();
+        public ActionResult<Cart> GetCart()
+        {
+            return cartService.GetCart();
+        }
 
         [HttpPut("{productId}")]
         public IActionResult PutProductToCart(int productId)

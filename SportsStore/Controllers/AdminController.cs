@@ -1,12 +1,12 @@
-﻿using DataLayer.Entityes;
+﻿using BuisnessLayer.Entityes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ViewLayer.Services;
-using ViewLayer.ViewModels;
+using BuisnessLayer.Services;
+using BuisnessLayer.Models;
 
 namespace SportsStore.Controllers
 {

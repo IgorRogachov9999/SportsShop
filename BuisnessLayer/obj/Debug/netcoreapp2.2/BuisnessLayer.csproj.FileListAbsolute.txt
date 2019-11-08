@@ -10,11 +10,7 @@ C:\Users\igor\Source\Repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\Buis
 C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.deps.json
 C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.dll
 C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.pdb
-C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\DataLayer.dll
-C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\DataLayer.pdb
-C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.csprojAssemblyReference.cache
 C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.AssemblyInfoInputs.cache
 C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.AssemblyInfo.cs
-C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.csproj.CopyComplete
 C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.dll
 C:\Users\rogachov\source\repos\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.pdb

@@ -14,27 +14,27 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #line 1 "C:\Users\rogachov\Source\Repos\SportsShop\SportsStore\Views\_ViewImports.cshtml"
-using DataLayer;
+using BuisnessLayer;
 
 #line default
 #line hidden
 #line 2 "C:\Users\rogachov\Source\Repos\SportsShop\SportsStore\Views\_ViewImports.cshtml"
-using DataLayer.Entityes;
+using BuisnessLayer.Entityes;
 
 #line default
 #line hidden
 #line 3 "C:\Users\rogachov\Source\Repos\SportsShop\SportsStore\Views\_ViewImports.cshtml"
-using ViewLayer.ViewModels;
+using BuisnessLayer.Models;
 
 #line default
 #line hidden
 #line 4 "C:\Users\rogachov\Source\Repos\SportsShop\SportsStore\Views\_ViewImports.cshtml"
-using ViewLayer.Infrastructure;
+using BuisnessLayer.Infrastructure;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c69d89615d9ccd374d5257f1987f5148e5924d97", @"/Views/AdminCategory/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4e60e32e9035e209328be4310d43ac8f6970d984", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"072b6c87c89ad87b31db40d83ec7f25c91ddcc17", @"/Views/_ViewImports.cshtml")]
     public class Views_AdminCategory_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<Category>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Edit", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -107,12 +107,12 @@ using ViewLayer.Infrastructure;
             WriteLiteral("</td>\r\n            <td class=\"text-center\">\r\n                ");
             EndContext();
             BeginContext(468, 484, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c69d89615d9ccd374d5257f1987f5148e5924d977225", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c69d89615d9ccd374d5257f1987f5148e5924d977237", async() => {
                 BeginContext(508, 22, true);
                 WriteLiteral("\r\n                    ");
                 EndContext();
                 BeginContext(530, 172, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c69d89615d9ccd374d5257f1987f5148e5924d977628", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c69d89615d9ccd374d5257f1987f5148e5924d977640", async() => {
                     BeginContext(646, 52, true);
                     WriteLiteral("\r\n                        Edit\r\n                    ");
                     EndContext();
@@ -187,7 +187,7 @@ WriteAttributeValue("", 770, item.CategoryID, 770, 16, false);
             WriteLiteral("</table>\r\n<div class=\"text-center\">\r\n    ");
             EndContext();
             BeginContext(1036, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c69d89615d9ccd374d5257f1987f5148e5924d9712697", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c69d89615d9ccd374d5257f1987f5148e5924d9712709", async() => {
                 BeginContext(1083, 12, true);
                 WriteLiteral("Add Category");
                 EndContext();

@@ -1,12 +1,13 @@
-﻿using DataLayer;
-using DataLayer.Entityes;
+﻿using BuisnessLayer;
+using BuisnessLayer.Entityes;
 using BuisnessLayer.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataLayer;
 
-namespace BuisnessLayer.EFRepositories
+namespace DataLayer.EFRepositories
 {
     public class EFCategoryRepository : ICategoryRepository
     {

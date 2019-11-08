@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DataLayer;
-using DataLayer.Entityes;
+using BuisnessLayer.Entityes;
 using BuisnessLayer.Repositories;
+using BuisnessLayer;
+using DataLayer;
 
-namespace SportsStore.Models
+namespace DataLayer.EFRepositories
 {
     public class EFProductRepository : IProductRepository
     {

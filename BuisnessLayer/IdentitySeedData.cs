@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SportsStore.Models
+namespace BuisnessLayer
 {
     public static class IdentitySeedData
     {

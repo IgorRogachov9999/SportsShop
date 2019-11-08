@@ -7,15 +7,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SportsStore.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using DataLayer;
 using BuisnessLayer.Repositories;
-using ViewLayer.ViewModels;
-using BuisnessLayer.EFRepositories;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-using ViewLayer.Services;
+using BuisnessLayer.Models;
+using DataLayer.EFRepositories;
+using BuisnessLayer.Services;
+using BuisnessLayer;
+using DataLayer;
 
 namespace SportsStore
 {
@@ -48,12 +47,12 @@ namespace SportsStore
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(
                     Configuration["Data:SportStoreProducts:ConnectionString"],
-                    b => b.MigrationsAssembly("SportsStore")));
+                    b => b.MigrationsAssembly("DataLayer")));
 
             services.AddDbContext<AppIdentityDbContext>(options =>
                 options.UseSqlServer(
                     Configuration["Data:SportStoreIdentity:ConnectionString"],
-                    b => b.MigrationsAssembly("SportsStore")));
+                    b => b.MigrationsAssembly("DataLayer")));
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppIdentityDbContext>()

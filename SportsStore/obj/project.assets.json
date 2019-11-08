@@ -4785,7 +4785,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "DataLayer": "1.0.0"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
+          "Microsoft.AspNetCore.Identity.UI": "2.1.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.1.0"
         },
         "compile": {
           "bin/placeholder/BuisnessLayer.dll": {}
@@ -4798,33 +4800,17 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "BuisnessLayer": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.1.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
-          "Microsoft.EntityFrameworkCore": "2.2.6"
+          "Microsoft.EntityFrameworkCore": "2.2.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.0"
         },
         "compile": {
           "bin/placeholder/DataLayer.dll": {}
         },
         "runtime": {
           "bin/placeholder/DataLayer.dll": {}
-        }
-      },
-      "ViewLayer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "BuisnessLayer": "1.0.0",
-          "DataLayer": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "2.1.0",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.0.0",
-          "Microsoft.AspNetCore.Razor": "2.1.0",
-          "Newtonsoft.Json": "11.0.1"
-        },
-        "compile": {
-          "bin/placeholder/ViewLayer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ViewLayer.dll": {}
         }
       }
     }
@@ -7720,6 +7706,7 @@
       "path": "microsoft.netcore.targets/2.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
@@ -13228,11 +13215,6 @@
       "type": "project",
       "path": "../DataLayer/DataLayer.csproj",
       "msbuildProject": "../DataLayer/DataLayer.csproj"
-    },
-    "ViewLayer/1.0.0": {
-      "type": "project",
-      "path": "../ViewLayer/ViewLayer.csproj",
-      "msbuildProject": "../ViewLayer/ViewLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -13247,7 +13229,6 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
       "Microsoft.jQuery.Unobtrusive.Validation >= 3.2.11",
-      "ViewLayer >= 1.0.0",
       "bootstrap >= 4.3.1",
       "jQuery >= 3.4.1",
       "jQuery.Validation >= 1.17.0"
@@ -13284,9 +13265,6 @@
             },
             "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
               "projectPath": "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj"
-            },
-            "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\ViewLayer\\ViewLayer.csproj": {
-              "projectPath": "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\ViewLayer\\ViewLayer.csproj"
             }
           }
         }

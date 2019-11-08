@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DataLayer.Entityes;
+using BuisnessLayer.Entityes;
 
 namespace BuisnessLayer.Repositories
 {

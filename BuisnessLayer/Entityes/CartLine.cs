@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DataLayer.Entityes
+namespace BuisnessLayer.Entityes
 {
     public class CartLine
     {

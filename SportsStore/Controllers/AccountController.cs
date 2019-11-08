@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using ViewLayer.ViewModels;
+using BuisnessLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ViewLayer.Services;
+using BuisnessLayer.Services;
 
 namespace SportsStore.Controllers
 {
@@ -34,14 +34,7 @@ namespace SportsStore.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginModel loginModel)
         {
-            string url = "";
-
-            if (ModelState.IsValid)
-            {
-                url = await accountService.Login(loginModel);
-            }
-
-            if (url != "")
+            if (ModelState.IsValid && await accountService.Login(loginModel))
             {
                 return Redirect(loginModel?.ReturnUrl ?? "/Admin/Index");
             }

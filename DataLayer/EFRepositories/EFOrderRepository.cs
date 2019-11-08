@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BuisnessLayer.Repositories;
-using DataLayer.Entityes;
+using BuisnessLayer.Entityes;
+using BuisnessLayer;
 using DataLayer;
 
-namespace SportsStore.Models
+namespace DataLayer.EFRepositories
 {
     public class EFOrderRepository : IOrderRepository
     {

@@ -34,7 +34,6 @@
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.3",
           "Microsoft.jQuery.Unobtrusive.Validation": "3.2.11",
-          "ViewLayer": "1.0.0",
           "bootstrap": "4.3.1",
           "jQuery": "3.4.1",
           "jQuery.Validation": "1.17.0"
@@ -511,7 +510,9 @@
       },
       "BuisnessLayer/1.0.0": {
         "dependencies": {
-          "DataLayer": "1.0.0"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
+          "Microsoft.AspNetCore.Identity.UI": "2.2.0",
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.0"
         },
         "runtime": {
           "BuisnessLayer.dll": {}
@@ -522,31 +523,17 @@
       },
       "DataLayer/1.0.0": {
         "dependencies": {
+          "BuisnessLayer": "1.0.0",
           "Microsoft.AspNetCore.Identity": "2.2.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
-          "Microsoft.EntityFrameworkCore": "2.2.6"
+          "Microsoft.EntityFrameworkCore": "2.2.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.0"
         },
         "runtime": {
           "DataLayer.dll": {}
         },
         "compile": {
           "DataLayer.dll": {}
-        }
-      },
-      "ViewLayer/1.0.0": {
-        "dependencies": {
-          "BuisnessLayer": "1.0.0",
-          "DataLayer": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "2.2.0",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
-          "Microsoft.AspNetCore.Razor": "2.2.0",
-          "Newtonsoft.Json": "11.0.2"
-        },
-        "runtime": {
-          "ViewLayer.dll": {}
-        },
-        "compile": {
-          "ViewLayer.dll": {}
         }
       },
       "Microsoft.AspNetCore/2.2.0": {
@@ -3917,11 +3904,6 @@
       "sha512": ""
     },
     "DataLayer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ViewLayer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

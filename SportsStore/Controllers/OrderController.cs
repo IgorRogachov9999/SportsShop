@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DataLayer.Entityes;
+using BuisnessLayer.Entityes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using SportsStore.Models;
-using ViewLayer.Services;
+using BuisnessLayer.Services;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,20 +21,14 @@ namespace SportsStore.Controllers
         }
 
         [Authorize]
-        public ViewResult List() =>
-            View(orderService.Orders);
+        public ViewResult List() => View(orderService.Orders);
 
         [HttpPost]
         [Authorize]
         public IActionResult MarkShipped(int orderID)
         {
-            Order order = orderService.FindOrder(orderID);
+            orderService.MarkAsReaded(orderID);
 
-            if (order != null)
-            {
-                order.Shipped = true;
-                orderService.SaveOrder(order);
-            }
             return RedirectToAction(nameof(List));
         }
 
@@ -50,8 +43,6 @@ namespace SportsStore.Controllers
             }
             if (ModelState.IsValid)
             {
-                order.Lines = orderService.Cart.Lines.ToArray();
-                orderService.SaveOrder(order);
                 return RedirectToAction(nameof(Completed));
             }
             else
@@ -62,7 +53,7 @@ namespace SportsStore.Controllers
 
         public ViewResult Completed()
         {
-            orderService.Cart.Clear();
+            orderService.ClearCart();
             return View();
         }
 
