@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataLayer.Entityes;
 using Microsoft.AspNetCore.Mvc;
-using SportsStore.Models.Models;
-using SportsStore.Models.Repositories;
+using ViewLayer.Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,17 +14,17 @@ namespace SportsStore.Api
     [ApiController]
     public class CategoryController : Controller
     {
-        private readonly ICategoryRepository _repository;
+        private readonly CategoryService categoryService;
 
-        public CategoryController(ICategoryRepository repository)
+        public CategoryController(CategoryService categoryService)
         {
-            _repository = repository;
+            this.categoryService = categoryService;
         }
 
         [HttpGet]
         public IEnumerable<Category> Get()
         {
-            return _repository.Categories;
+            return categoryService.Categories;
         }
     }
 }

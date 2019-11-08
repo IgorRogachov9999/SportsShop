@@ -14,5 +14,11 @@ namespace BuisnessLayer.Repositories
 
         Product DeleteProduct(int productID);
 
+        Product FindProduct(int productId);
+
+        IEnumerable<Product> CategoryProducts(string category);
+
+        IEnumerable<Product> GetProductPage(int page, int pageSize);
+        
     }
 }

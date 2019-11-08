@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "079a237ad98849cb522c24fa4b16aa36c8051c49"
+    "signature": ""
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
       "DataLayer/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity": "2.1.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.1.0",
           "Microsoft.EntityFrameworkCore": "2.2.6"
         },
         "runtime": {
@@ -206,6 +207,19 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.1.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity": "2.1.0",
+          "Microsoft.EntityFrameworkCore.Relational": "2.1.0",
+          "Microsoft.Extensions.Identity.Stores": "2.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.18136"
+          }
+        }
+      },
       "Microsoft.AspNetCore.WebUtilities/2.1.0": {
         "dependencies": {
           "Microsoft.Net.Http.Headers": "2.1.0",
@@ -247,6 +261,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/2.2.6": {},
+      "Microsoft.EntityFrameworkCore.Relational/2.1.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.6"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Relational.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.18136"
+          }
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "2.2.0"
@@ -362,6 +387,19 @@
           }
         }
       },
+      "Microsoft.Extensions.Identity.Stores/2.1.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Identity.Core": "2.1.0",
+          "Microsoft.Extensions.Logging": "2.2.0",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.18136"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/2.2.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Binder": "2.2.0",
@@ -446,16 +484,6 @@
         "dependencies": {
           "System.Security.AccessControl": "4.5.0",
           "System.Security.Principal.Windows": "4.5.0"
-        },
-        "runtimeTargets": {
-          "runtime/unix/lib/_._": {
-            "rid": "unix",
-            "assetType": "runtime"
-          },
-          "runtime/win/lib/_._": {
-            "rid": "win",
-            "assetType": "runtime"
-          }
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -637,22 +665,9 @@
       "System.Security.AccessControl/4.5.0": {
         "dependencies": {
           "System.Security.Principal.Windows": "4.5.0"
-        },
-        "runtimeTargets": {
-          "runtime/win/lib/_._": {
-            "rid": "win",
-            "assetType": "runtime"
-          }
         }
       },
-      "System.Security.Cryptography.Cng/4.5.0": {
-        "runtimeTargets": {
-          "runtime/win/lib/_._": {
-            "rid": "win",
-            "assetType": "runtime"
-          }
-        }
-      },
+      "System.Security.Cryptography.Cng/4.5.0": {},
       "System.Security.Cryptography.Pkcs/4.5.0": {
         "dependencies": {
           "System.Security.Cryptography.Cng": "4.5.0"
@@ -695,18 +710,7 @@
           }
         }
       },
-      "System.Security.Principal.Windows/4.5.0": {
-        "runtimeTargets": {
-          "runtime/unix/lib/_._": {
-            "rid": "unix",
-            "assetType": "runtime"
-          },
-          "runtime/win/lib/_._": {
-            "rid": "win",
-            "assetType": "runtime"
-          }
-        }
-      },
+      "System.Security.Principal.Windows/4.5.0": {},
       "System.Text.Encoding/4.0.11": {
         "dependencies": {
           "System.Runtime": "4.1.0"
@@ -844,6 +848,13 @@
       "path": "microsoft.aspnetcore.identity/2.1.0",
       "hashPath": "microsoft.aspnetcore.identity.2.1.0.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6wpb/OUcBysd2dBNPFwYXf5MfeZWl5nMd6mykpHgs/p7EZti/zjCU9HEkS5Yhw9twPakHGXT1jaAMOF7i4n1ug==",
+      "path": "microsoft.aspnetcore.identity.entityframeworkcore/2.1.0",
+      "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.2.1.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.WebUtilities/2.1.0": {
       "type": "package",
       "serviceable": true,
@@ -871,6 +882,13 @@
       "sha512": "sha512-BpNllkfZABCvMAaIL/pSLxTYYZQqiVesSG6xQpvelrlEfC0s9PS217Sq5Apn/zYW8ALtGoVEY12TblHrZ4SRRA==",
       "path": "microsoft.entityframeworkcore.analyzers/2.2.6",
       "hashPath": "microsoft.entityframeworkcore.analyzers.2.2.6.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Relational/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k9IZWAjYo6OjKKCoXoj4VYCUNKTJvQF2qwAV+CDCy4Sr7YyPys/9bV/3Cbs4+IobSDLwBIEBlClsCK+YpnK+QQ==",
+      "path": "microsoft.entityframeworkcore.relational/2.1.0",
+      "hashPath": "microsoft.entityframeworkcore.relational.2.1.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
       "type": "package",
@@ -941,6 +959,13 @@
       "sha512": "sha512-ANFe9HR9thO9CU9x8mc7h1uw75Aqz5uDe7xgGM6t2iBITEidLNhULzqPidI0xV2Mg54pdPMA8/vtS5FRLCQWgQ==",
       "path": "microsoft.extensions.identity.core/2.1.0",
       "hashPath": "microsoft.extensions.identity.core.2.1.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Identity.Stores/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I5h21Va/V5in+UeEFxi9672OXogt0oVKM0IaAmPHNnCXLPsIHHnmuatAPaf7NFAwjTj3jM/57HpmEJzj0Jpbtg==",
+      "path": "microsoft.extensions.identity.stores/2.1.0",
+      "hashPath": "microsoft.extensions.identity.stores.2.1.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/2.2.0": {
       "type": "package",

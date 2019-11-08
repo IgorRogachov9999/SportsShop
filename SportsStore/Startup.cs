@@ -10,8 +10,12 @@ using Microsoft.Extensions.DependencyInjection;
 using SportsStore.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using SportsStore.Models.Repositories;
-using SportsStore.Models.EFRepositories;
+using DataLayer;
+using BuisnessLayer.Repositories;
+using ViewLayer.ViewModels;
+using BuisnessLayer.EFRepositories;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+using ViewLayer.Services;
 
 namespace SportsStore
 {
@@ -22,7 +26,7 @@ namespace SportsStore
 
         public IConfiguration Configuration { get; }
 
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        private readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
@@ -42,10 +46,14 @@ namespace SportsStore
             });
 
             services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlServer(Configuration["Data:SportStoreProducts:ConnectionString"]));
+                options.UseSqlServer(
+                    Configuration["Data:SportStoreProducts:ConnectionString"],
+                    b => b.MigrationsAssembly("SportsStore")));
 
             services.AddDbContext<AppIdentityDbContext>(options =>
-                options.UseSqlServer(Configuration["Data:SportStoreIdentity:ConnectionString"]));
+                options.UseSqlServer(
+                    Configuration["Data:SportStoreIdentity:ConnectionString"],
+                    b => b.MigrationsAssembly("SportsStore")));
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppIdentityDbContext>()
@@ -56,6 +64,13 @@ namespace SportsStore
             services.AddTransient<ICategoryRepository, EFCategoryRepository>();
             services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddTransient<AccountService, AccountService>();
+            services.AddTransient<CartService, CartService>();
+            services.AddTransient<CategoryService, CategoryService>();
+            services.AddTransient<OrderService, OrderService>();
+            services.AddTransient<ProductServcie, ProductServcie>();
+
             services.AddCors();
             services.AddMvc();
             services.AddMemoryCache();

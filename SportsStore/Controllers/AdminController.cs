@@ -1,41 +1,39 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using DataLayer.Entityes;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using SportsStore.Models;
-using SportsStore.Models.Models;
-using SportsStore.Models.Repositories;
-using SportsStore.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ViewLayer.Services;
+using ViewLayer.ViewModels;
 
 namespace SportsStore.Controllers
 {
     [Authorize]
     public class AdminController : Controller
     {
-        private IProductRepository repository;
+        private ProductServcie productServcie;
 
-        private ICategoryRepository categoryRepository;
+        private CategoryService categoryService;
 
-        public AdminController(IProductRepository repo, ICategoryRepository categoryRepository)
+        public AdminController(ProductServcie productServcie, CategoryService categoryService)
         {
-            repository = repo;
-            this.categoryRepository = categoryRepository;
+            this.productServcie = productServcie;
+            this.categoryService = categoryService;
         }
 
         public ViewResult Index()
         {
-            return View(repository.Products);
+            return View(productServcie.Products);
         }
 
         public ViewResult Edit(int productId)
         {
             return View(new EditProductViewModel
             {
-                Product = repository.Products
-                    .FirstOrDefault(p => p.ProductID == productId),
-                AllCategories = categoryRepository.Categories
+                Product = productServcie.FindProduct(productId),
+                AllCategories = categoryService.GetCategories()
             });
         }
            
@@ -45,7 +43,7 @@ namespace SportsStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                repository.SaveProduct(product);
+                productServcie.SaveProduct(product);
                 TempData["message"] = $"{product.Name} has been saved";
                 return RedirectToAction("Index");
             }
@@ -54,20 +52,20 @@ namespace SportsStore.Controllers
                 return View(new EditProductViewModel
                 {
                     Product = product,
-                    AllCategories = categoryRepository.Categories
+                    AllCategories = categoryService.GetCategories()
                 });
             }
         }
 
         public ViewResult Create() => View("Edit", new EditProductViewModel {
             Product = new Product(),
-            AllCategories = categoryRepository.Categories
+            AllCategories = categoryService.GetCategories()
         });
 
         [HttpPost]  
         public IActionResult Delete(int productId)
         {
-            Product deletedProduct = repository.DeleteProduct(productId);
+            Product deletedProduct = productServcie.DeleteProduct(productId);
             if (deletedProduct != null)
             {
                 TempData["message"] = $"{deletedProduct.Name} was deleted";

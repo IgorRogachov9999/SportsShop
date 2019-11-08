@@ -13,5 +13,9 @@ namespace BuisnessLayer.Repositories
         void SaveCategory(Category category);
 
         Category DelteCategory(int categoryID);
+
+        Category FindCategory(int categoryID);
+
+        Category FindCategoryByName(string name);
     }
 }

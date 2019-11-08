@@ -1,64 +1,60 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using SportsStore.Models.ViewModels;
+using ViewLayer.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ViewLayer.Services;
 
 namespace SportsStore.Controllers
 {
-        [Authorize]
-        public class AccountController : Controller
+    [Authorize]
+    public class AccountController : Controller
+    {
+        private AccountService accountService;
+
+        public AccountController(AccountService accountService)
         {
-            private UserManager<IdentityUser> userManager;
+            this.accountService = accountService;
+        }
 
-            private SignInManager<IdentityUser> signInManager;
-
-            public AccountController(UserManager<IdentityUser> userMgr,
-                SignInManager<IdentityUser> signInMgr)
+        [AllowAnonymous]
+        public ViewResult Login(string returnUrl)
+        {
+            return View(new LoginModel
             {
-                userManager = userMgr;
-                signInManager = signInMgr;
+                ReturnUrl = returnUrl
+            });
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginModel loginModel)
+        {
+            string url = "";
+
+            if (ModelState.IsValid)
+            {
+                url = await accountService.Login(loginModel);
             }
 
-            [AllowAnonymous]
-            public ViewResult Login(string returnUrl)
+            if (url != "")
             {
-                return View(new LoginModel
-                {
-                    ReturnUrl = returnUrl
-                });
+                return Redirect(loginModel?.ReturnUrl ?? "/Admin/Index");
             }
 
-            [HttpPost]
-            [AllowAnonymous]
-            [ValidateAntiForgeryToken]
-            public async Task<IActionResult> Login(LoginModel loginModel)
-            {
-                if (ModelState.IsValid)
-                {
-                    IdentityUser user =
-                        await userManager.FindByNameAsync(loginModel.Name);
-                    if (user != null)
-                    {
-                        await signInManager.SignOutAsync();
-                        if ((await signInManager.PasswordSignInAsync(user,
-                                loginModel.Password, false, false)).Succeeded)
-                        {
-                            return Redirect(loginModel?.ReturnUrl ?? "/Admin/Index");
-                        }
-                    }
-                }
-                ModelState.AddModelError("", "Invalid name or password");
-                return View(loginModel);
-            }
+            ModelState.AddModelError("", "Invalid name or password");
+            return View(loginModel);
+        }
 
-            public async Task<RedirectResult> Logout(string returnUrl = "/")
-            {
-                await signInManager.SignOutAsync();
-                return Redirect(returnUrl);
-            }
+        public RedirectResult Logout(string returnUrl = "/")
+        {
+            accountService.SignOutAsync();
+
+            return Redirect(returnUrl);
+        }
     }
 }

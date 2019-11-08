@@ -12,5 +12,9 @@ namespace BuisnessLayer.Repositories
 
         void SaveOrder(Order order);
 
+        IEnumerable<Order> ActiveOrders { get; }
+
+        Order FindOrder(int orderID);
+
     }
 }

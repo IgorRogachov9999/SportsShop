@@ -11,5 +11,7 @@ namespace DataLayer.Entityes
         public int CategoryID { get; set; }
 
         public string Name { get; set; }
+
+        public bool IsEnable { get; set; }
     }
 }

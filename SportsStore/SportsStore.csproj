@@ -22,4 +22,10 @@
     <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BuisnessLayer\BuisnessLayer.csproj" />
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj" />
+    <ProjectReference Include="..\ViewLayer\ViewLayer.csproj" />
+  </ItemGroup>
+
 </Project>

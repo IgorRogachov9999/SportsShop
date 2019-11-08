@@ -17,6 +17,15 @@ namespace DataLayer
 
         public DbSet<Order> Orders { get; set; }
 
-        public DbSet<CartLine> CartLines { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>()
+                .Property(b => b.IsEnable)
+                .HasDefaultValue(true);
+
+            modelBuilder.Entity<Category>()
+                .Property(b => b.IsEnable)
+                .HasDefaultValue(true);
+        }
     }
 }

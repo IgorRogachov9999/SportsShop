@@ -31,5 +31,12 @@ namespace SportsStore.Models
             context.SaveChanges();
         }
 
+        public Order FindOrder(int orderID)
+        {
+            return Orders.FirstOrDefault(o => o.OrderID == orderID);
+        }
+
+        public IEnumerable<Order> ActiveOrders => Orders.Where(o => !o.Shipped);
+
     }
 }

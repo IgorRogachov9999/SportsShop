@@ -7,3 +7,16 @@ C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLaye
 C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.AssemblyInfo.cs
 C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.dll
 C:\Users\igor\Source\Repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.pdb
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\ViewLayer.deps.json
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\ViewLayer.dll
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\ViewLayer.pdb
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.dll
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\DataLayer.dll
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.pdb
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\bin\Debug\netcoreapp2.2\DataLayer.pdb
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.csprojAssemblyReference.cache
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.AssemblyInfoInputs.cache
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.AssemblyInfo.cs
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.csproj.CopyComplete
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.dll
+C:\Users\rogachov\source\repos\SportsShop\ViewLayer\obj\Debug\netcoreapp2.2\ViewLayer.pdb

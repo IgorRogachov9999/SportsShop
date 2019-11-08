@@ -4082,23 +4082,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\igor\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\rogachov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj",
-      "packagesPath": "C:\\Users\\igor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\obj\\",
+      "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj",
+      "packagesPath": "C:\\Users\\rogachov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rogachov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4142,10 +4138,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

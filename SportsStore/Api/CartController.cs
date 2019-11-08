@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using SportsStore.Models;
+using BuisnessLayer.Repositories;
+using ViewLayer.ViewModels;
+using ViewLayer;
+using ViewLayer.Services;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -13,45 +16,30 @@ namespace SportsStore.Api
     [ApiController]
     public class CartController : Controller
     {
-        private readonly IProductRepository _repository;
+        private readonly CartService cartService;
 
-        private Cart cart;
-
-        public CartController(IProductRepository repository, Cart cartService)
+        public CartController(CartService cartService)
         {
-            _repository = repository;
-            cart = cartService;
+            this.cartService = cartService;
         }
 
         [HttpGet]
-        public ActionResult<Cart> GetCart() => cart;
+        public ActionResult<Cart> GetCart() => cartService.GetCart();
 
         [HttpPut("{productId}")]
         public IActionResult PutProductToCart(int productId)
         {
-            Product product = _repository.Products
-                .FirstOrDefault(p => p.ProductID == productId);
-
-            if (product != null)
-            {
-                cart.AddItem(product, 1);
-            }
+            cartService.PutProductToCart(productId);
 
             return NoContent();
         }
 
         [HttpDelete("{productId}")]
-        public Cart DeleteProductFromCart(int productId)
+        public ActionResult<Cart> DeleteProductFromCart(int productId)
         {
-            Product product = _repository.Products
-                .FirstOrDefault(p => p.ProductID == productId);
+            cartService.DeleteProductFromCart(productId);
 
-            if (product != null)
-            {
-                cart.RemoveLine(product);
-            }
-
-            return cart;
+            return GetCart();
         }
     }
 }

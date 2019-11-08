@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\igor\\Source\\Repos\\SportsShop\\ViewLayer\\ViewLayer.csproj": {}
+    "C:\\Users\\rogachov\\source\\repos\\SportsShop\\ViewLayer\\ViewLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\igor\\Source\\Repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj": {
+    "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
         "projectName": "BuisnessLayer",
-        "projectPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
-        "packagesPath": "C:\\Users\\igor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\BuisnessLayer\\obj\\",
+        "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
+        "packagesPath": "C:\\Users\\rogachov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rogachov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +27,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj"
+              "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -53,27 +50,30 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\igor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\obj\\",
+        "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\rogachov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rogachov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -117,27 +117,30 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\igor\\Source\\Repos\\SportsShop\\ViewLayer\\ViewLayer.csproj": {
+    "C:\\Users\\rogachov\\source\\repos\\SportsShop\\ViewLayer\\ViewLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\ViewLayer\\ViewLayer.csproj",
+        "projectUniqueName": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\ViewLayer\\ViewLayer.csproj",
         "projectName": "ViewLayer",
-        "projectPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\ViewLayer\\ViewLayer.csproj",
-        "packagesPath": "C:\\Users\\igor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\ViewLayer\\obj\\",
+        "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\ViewLayer\\ViewLayer.csproj",
+        "packagesPath": "C:\\Users\\rogachov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\ViewLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rogachov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -150,11 +153,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\igor\\Source\\Repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj": {
-                "projectPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj"
+              "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj": {
+                "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj"
               },
-              "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj"
+              "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -168,18 +171,40 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.AspNetCore.Razor": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[11.0.1, )"
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

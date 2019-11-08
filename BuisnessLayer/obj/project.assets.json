@@ -2903,6 +2903,7 @@
       "path": "system.linq.queryable/4.0.1",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/monoandroid10/_._",
@@ -4100,23 +4101,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\igor\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\rogachov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
       "projectName": "BuisnessLayer",
-      "projectPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
-      "packagesPath": "C:\\Users\\igor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\BuisnessLayer\\obj\\",
+      "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
+      "packagesPath": "C:\\Users\\rogachov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\igor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rogachov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4129,8 +4126,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "C:\\Users\\igor\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj"
+            "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\DataLayer\\DataLayer.csproj"
             }
           }
         }
@@ -4152,10 +4149,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

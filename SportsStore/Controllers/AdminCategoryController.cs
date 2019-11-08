@@ -1,36 +1,38 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SportsStore.Models;
-using SportsStore.Models.Models;
-using SportsStore.Models.Repositories;
+using ViewLayer.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataLayer.Entityes;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SportsStore.Controllers
 {
+    [Authorize]
     public class AdminCategoryController : Controller
     {
-        private ICategoryRepository repository;
+        private CategoryService categoryService;
 
-        public AdminCategoryController(ICategoryRepository categoryRepository)
+        public AdminCategoryController(CategoryService categoryService)
         {
-            this.repository = categoryRepository;
+            this.categoryService = categoryService;
         }
 
         public ViewResult Index()
         {
-            return View(repository.Categories);
+            return View(categoryService.GetCategories());
         }
 
         public IActionResult Edit(int categoryID)
         {
-            Category category = repository.Categories.FirstOrDefault(c => c.CategoryID == categoryID);
+            Category category = categoryService.FindCategory(categoryID);
 
             if (category != null)
             {
                 return View(category);
-            } else
+            } 
+            else
             {
                 return RedirectToAction("Index");
             }
@@ -39,12 +41,12 @@ namespace SportsStore.Controllers
         [HttpPost]
         public IActionResult Edit(Category category)
         {
-            Category dbCategory = repository.Categories.FirstOrDefault(c => c.Name == category.Name);
+            Category dbCategory = categoryService.FindCategoryByName(category.Name);
             bool isUniq = dbCategory == null || dbCategory.CategoryID == category.CategoryID;
 
             if (ModelState.IsValid && isUniq)
             {
-                repository.SaveCategory(category);
+                categoryService.SaveCategory(category);
                 TempData["message"] = $"{category.Name} has been saved";
                 return RedirectToAction("Index");
             }
@@ -59,7 +61,7 @@ namespace SportsStore.Controllers
         [HttpPost]
         public IActionResult Delete(int categoryID)
         {
-            Category deletedCategory = repository.DelteCategory(categoryID);
+            Category deletedCategory = categoryService.DeleteCategory(categoryID);
             if (deletedCategory != null)
             {
                 TempData["message"] = $"{deletedCategory.Name} was deleted";

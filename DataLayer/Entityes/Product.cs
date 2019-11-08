@@ -18,5 +18,7 @@ namespace DataLayer.Entityes
         public decimal Price { get; set; }
 
         public string ProductCategory { get; set; }
+
+        public bool IsEnable { get; set; }
     }
 }

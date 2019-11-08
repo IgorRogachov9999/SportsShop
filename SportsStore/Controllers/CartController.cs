@@ -5,52 +5,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
-using SportsStore.Infrastructere;
-using SportsStore.Models.ViewModels;
+using ViewLayer.Services;
+using ViewLayer.ViewModels;
 
 namespace SportsStore.Controllers
 {
     public class CartController : Controller
     {
-        private IProductRepository repository;
+        private CartService cartService;
 
-        private Cart cart;
-
-        public CartController(IProductRepository repo, Cart cartService)
+        public CartController(CartService cartService)
         {
-            repository = repo;
-            cart = cartService;
+            this.cartService = cartService;
         }
 
         public ViewResult Index(string returnUrl)
         {
             return View(new CartIndexViewModel
             {
-                Cart = cart,
+                Cart = cartService.GetCart(),
                 ReturnUrl = returnUrl
             });
         }
 
         public RedirectToActionResult AddToCart(int productId, string returnUrl)
         {
-            Product product = repository.Products
-                .FirstOrDefault(p => p.ProductID == productId);
-            if (product != null)
-            {
-                cart.AddItem(product, 1);
-            }
+            cartService.PutProductToCart(productId);
             
             return RedirectToAction("Index", new { returnUrl });
         }
 
         public RedirectToActionResult RemoveFromCart(int productId, string returnUrl)
         {
-            Product product = repository.Products
-                .FirstOrDefault(p => p.ProductID == productId);
-            if (product != null)
-            {
-                cart.RemoveLine(product);
-            }
+            cartService.DeleteProductFromCart(productId);
+
             return RedirectToAction("Index", new { returnUrl });
         }
     }
