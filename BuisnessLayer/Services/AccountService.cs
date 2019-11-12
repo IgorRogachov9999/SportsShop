@@ -9,9 +9,9 @@ namespace BuisnessLayer.Services
 {
     public class AccountService
     {
-        private UserManager<IdentityUser> userManager;
+        private readonly UserManager<IdentityUser> userManager;
 
-        private SignInManager<IdentityUser> signInManager;
+        private readonly SignInManager<IdentityUser> signInManager;
 
         public AccountService(UserManager<IdentityUser> userMgr,
             SignInManager<IdentityUser> signInMgr)

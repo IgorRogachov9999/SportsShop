@@ -8,13 +8,13 @@ using BuisnessLayer.Models;
 
 namespace BuisnessLayer.Services
 {
-    public class ProductServcie
+    public class ProductService
     {
         public int PageSize = 10;
 
         private readonly IProductRepository repository;
 
-        public ProductServcie(IProductRepository repository)
+        public ProductService(IProductRepository repository)
         {
             this.repository = repository;
         }

@@ -8,7 +8,7 @@ namespace BuisnessLayer.Repositories
 {
     public interface IProductRepository
     {
-        IQueryable<Product> Products { get; }
+        IEnumerable<Product> Products { get; }
 
         void SaveProduct(Product product);
 

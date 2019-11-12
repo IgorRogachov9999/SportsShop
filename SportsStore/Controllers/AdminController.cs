@@ -13,26 +13,26 @@ namespace SportsStore.Controllers
     [Authorize]
     public class AdminController : Controller
     {
-        private ProductServcie productServcie;
+        private ProductService ProductService;
 
         private CategoryService categoryService;
 
-        public AdminController(ProductServcie productServcie, CategoryService categoryService)
+        public AdminController(ProductService ProductService, CategoryService categoryService)
         {
-            this.productServcie = productServcie;
+            this.ProductService = ProductService;
             this.categoryService = categoryService;
         }
 
         public ViewResult Index()
         {
-            return View(productServcie.Products);
+            return View(ProductService.Products);
         }
 
         public ViewResult Edit(int productId)
         {
             return View(new EditProductViewModel
             {
-                Product = productServcie.FindProduct(productId),
+                Product = ProductService.FindProduct(productId),
                 AllCategories = categoryService.GetCategories()
             });
         }
@@ -43,7 +43,7 @@ namespace SportsStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                productServcie.SaveProduct(product);
+                ProductService.SaveProduct(product);
                 TempData["message"] = $"{product.Name} has been saved";
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace SportsStore.Controllers
         [HttpPost]  
         public IActionResult Delete(int productId)
         {
-            Product deletedProduct = productServcie.DeleteProduct(productId);
+            Product deletedProduct = ProductService.DeleteProduct(productId);
             if (deletedProduct != null)
             {
                 TempData["message"] = $"{deletedProduct.Name} was deleted";

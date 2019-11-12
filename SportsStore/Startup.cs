@@ -68,7 +68,7 @@ namespace SportsStore
             services.AddTransient<CartService, CartService>();
             services.AddTransient<CategoryService, CategoryService>();
             services.AddTransient<OrderService, OrderService>();
-            services.AddTransient<ProductServcie, ProductServcie>();
+            services.AddTransient<ProductService, ProductService>();
 
             services.AddCors();
             services.AddMvc();

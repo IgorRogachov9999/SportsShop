@@ -20,7 +20,7 @@ namespace BuisnessLayer.Services
 
         public IEnumerable<Category> GetCategories()
         {
-            return repository.Categories;
+            return Categories;
         }
 
         public Category FindCategory(int categoryID)

@@ -12,7 +12,7 @@ namespace BuisnessLayer.Services
     {
         private readonly IProductRepository repository;
 
-        private Cart cart;
+        private readonly Cart cart;
 
         public CartService(IProductRepository repository, Cart cart)
         {

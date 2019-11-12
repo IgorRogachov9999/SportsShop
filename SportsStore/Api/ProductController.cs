@@ -15,9 +15,9 @@ namespace SportsStore.Api
     [ApiController]
     public class ProductController : Controller
     {
-        private ProductServcie productService;
+        private ProductService productService;
 
-        public ProductController(ProductServcie productService)
+        public ProductController(ProductService productService)
         {
             this.productService = productService;
         }

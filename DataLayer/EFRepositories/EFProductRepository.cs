@@ -18,7 +18,7 @@ namespace DataLayer.EFRepositories
             this.context = context;
         }
 
-        public IQueryable<Product> Products => context.Products.Where(p => p.IsEnable);
+        public IEnumerable<Product> Products => context.Products.Where(p => p.IsEnable);
 
         public void SaveProduct(Product product)
         {
