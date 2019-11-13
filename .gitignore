@@ -22,9 +22,9 @@ _UpgradeReport_Files/
 ###############
 # Directories #
 ###############
-bin/
-obj/
-TestResults/
+./*/bin/
+./*/obj/
+./*/TestResults/
 ###################
 # Web publish log #
 ###################
@@ -47,8 +47,6 @@ TestResults/
 *.rar
 *.tar
 *.zip
-ViewLayer
-SportsStore.Frontend
 ######################
 # Logs and databases #
 ######################
@@ -76,5 +74,3 @@ _[Ss]cripts
 *.ncrunchsolution
 *.dot[Cc]over
 .vs/
-bin/
-obj/
