@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using BuisnessLayer.Services;
-using BuisnessLayer.Models;
+using SportsStore.Models;
 
 namespace SportsStore.Controllers
 {

@@ -55,17 +55,17 @@ namespace DataLayer.EFRepositories
 
         public Product FindProduct(int productId)
         {
-            return Products.FirstOrDefault(p => p.ProductID == productId && p.IsEnable);
+            return context.Products.FirstOrDefault(p => p.ProductID == productId && p.IsEnable);
         }
 
         public IEnumerable<Product> CategoryProducts(string category)
         {
-            return Products.Where(p => (category == null || p.ProductCategory == category) && p.IsEnable);
+            return context.Products.Where(p => (category == null || p.ProductCategory == category) && p.IsEnable);
         }
 
         public IEnumerable<Product> GetProductPage(int page, int pageSize)
         {
-            return Products
+            return context.Products
                     .OrderBy(p => p.IsEnable)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);

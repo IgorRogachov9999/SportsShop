@@ -18,7 +18,7 @@ namespace DataLayer.EFRepositories
             context = ctx;
         }
 
-        public IQueryable<Category> Categories => context.Categories.Where(p => p.IsEnable);
+        public IEnumerable<Category> Categories => context.Categories.Where(p => p.IsEnable);
 
         public Category DelteCategory(int categoryID)
         {
@@ -34,12 +34,12 @@ namespace DataLayer.EFRepositories
 
         public Category FindCategory(int categoryID)
         {
-            return Categories.FirstOrDefault(c => c.CategoryID == categoryID && c.IsEnable);
+            return context.Categories.FirstOrDefault(c => c.CategoryID == categoryID && c.IsEnable);
         }
 
         public Category FindCategoryByName(string name)
         {
-            return Categories.FirstOrDefault(c => c.Name == name && c.IsEnable);
+            return context.Categories.FirstOrDefault(c => c.Name == name && c.IsEnable);
         }
 
         public void SaveCategory(Category category)

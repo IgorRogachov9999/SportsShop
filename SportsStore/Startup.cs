@@ -15,6 +15,7 @@ using DataLayer.EFRepositories;
 using BuisnessLayer.Services;
 using BuisnessLayer;
 using DataLayer;
+using SportsStore.Models;
 
 namespace SportsStore
 {

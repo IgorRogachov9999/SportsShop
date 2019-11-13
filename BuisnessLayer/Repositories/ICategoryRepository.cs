@@ -8,7 +8,7 @@ namespace BuisnessLayer.Repositories
 {
     public interface ICategoryRepository
     {
-        IQueryable<Category> Categories { get; }
+        IEnumerable<Category> Categories { get; }
 
         void SaveCategory(Category category);
 

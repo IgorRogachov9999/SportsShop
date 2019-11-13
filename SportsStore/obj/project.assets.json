@@ -13240,11 +13240,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\SportsStore\\SportsStore.csproj",
+      "projectUniqueName": "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\SportsStore\\SportsStore.csproj",
       "projectName": "SportsStore",
-      "projectPath": "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\SportsStore\\SportsStore.csproj",
+      "projectPath": "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\SportsStore\\SportsStore.csproj",
       "packagesPath": "C:\\Users\\rogachov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\SportsStore\\obj\\",
+      "outputPath": "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\SportsStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rogachov\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -13260,11 +13260,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj": {
-              "projectPath": "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj"
+            "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj": {
+              "projectPath": "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj"
             },
-            "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "C:\\Users\\rogachov\\Source\\Repos\\SportsShop\\DataLayer\\DataLayer.csproj"
+            "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\DataLayer\\DataLayer.csproj"
             }
           }
         }

@@ -21,7 +21,7 @@ namespace SportsStore.Tests.MockRepositories
             categories = new LinkedList<Category>();
         }
 
-        public IQueryable<Category> Categories => categories.Where(p => p.IsEnable).AsQueryable();
+        public IEnumerable<Category> Categories => categories.Where(p => p.IsEnable).AsQueryable();
 
         public Category DelteCategory(int categoryID)
         {

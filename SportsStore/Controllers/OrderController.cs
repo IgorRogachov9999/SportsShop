@@ -43,6 +43,7 @@ namespace SportsStore.Controllers
             }
             if (ModelState.IsValid)
             {
+                orderService.Checkout(order);
                 return RedirectToAction(nameof(Completed));
             }
             else

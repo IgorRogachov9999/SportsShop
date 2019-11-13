@@ -19,7 +19,7 @@ namespace DataLayer.EFRepositories
             context = ctx;
         }
 
-        public IQueryable<Order> Orders => context.Orders
+        public IEnumerable<Order> Orders => context.Orders
                             .Include(o => o.Lines)
                             .ThenInclude(l => l.Product);
 
@@ -35,10 +35,16 @@ namespace DataLayer.EFRepositories
 
         public Order FindOrder(int orderID)
         {
-            return Orders.FirstOrDefault(o => o.OrderID == orderID);
+            return context.Orders.Where(o => !o.Shipped)
+                                 .Include(o => o.Lines)
+                                 .ThenInclude(l => l.Product)
+                                 .FirstOrDefault(o => o.OrderID == orderID);
         }
 
-        public IEnumerable<Order> ActiveOrders => Orders.Where(o => !o.Shipped);
+        public IEnumerable<Order> ActiveOrders => context.Orders
+                                                         .Where(o => !o.Shipped)
+                                                         .Include(o => o.Lines)
+                                                         .ThenInclude(l => l.Product);
 
     }
 }

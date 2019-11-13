@@ -1,14 +1,15 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
-using BuisnessLayer.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BuisnessLayer.Entityes;
+using BuisnessLayer.Models;
+using SportsStore.Infrastructure;
 
-namespace BuisnessLayer.Models
+namespace SportsStore.Models
 {
     public class SessionCart : Cart
     {

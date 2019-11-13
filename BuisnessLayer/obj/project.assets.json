@@ -8276,11 +8276,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
       "projectName": "BuisnessLayer",
-      "projectPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
+      "projectPath": "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\BuisnessLayer\\BuisnessLayer.csproj",
       "packagesPath": "C:\\Users\\rogachov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rogachov\\source\\repos\\SportsShop\\BuisnessLayer\\obj\\",
+      "outputPath": "C:\\Users\\rogachov\\Desktop\\SportsStore\\SportsShop\\BuisnessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rogachov\\AppData\\Roaming\\NuGet\\NuGet.Config",

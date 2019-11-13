@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BuisnessLayer.Entityes;
+using BuisnessLayer.Models;
 
-namespace BuisnessLayer.Models
+namespace SportsStore.Models
 {
     public class CartIndexViewModel
     {

@@ -21,7 +21,7 @@ namespace SportsStore.Tests.MockRepositories
             orders = new LinkedList<Order>();
         }
 
-        public IQueryable<Order> Orders => orders.AsQueryable();
+        public IEnumerable<Order> Orders => orders.AsQueryable();
 
         public void SaveOrder(Order order)
         {
