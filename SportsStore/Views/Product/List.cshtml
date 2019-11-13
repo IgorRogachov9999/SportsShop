@@ -1,6 +1,6 @@
-﻿@model ProductsListViewModel
+﻿@model PageViewModel<Product>
 
-@foreach (var p in Model.Products)
+@foreach (var p in Model.PageData)
 {
     @Html.Partial("ProductSummary", p)
 }
@@ -9,7 +9,7 @@
 {
     <a asp-action="List"
        asp-route-productPage="@(Model.PagingInfo.CurrentPage - 1)"
-       asp-route-category="@Model.CurrentCategory"
+       asp-route-category="@Model.PageData.First().ProductCategory"
        class="btn btn-primary btn">
         Back
     </a>
@@ -18,7 +18,7 @@
 {
     <a asp-action="List"
        asp-route-productPage="@(Model.PagingInfo.CurrentPage + 1)"
-       asp-route-category="@Model.CurrentCategory"
+       asp-route-category="@Model.PageData.First().ProductCategory"
        class="btn btn-primary btn">
         Next
     </a>

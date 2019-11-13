@@ -36,13 +36,13 @@ namespace BuisnessLayer.Services
             return repository.DeleteProduct(productId);
         }
 
-        public ProductsListViewModel GetProductList(int page, string category)
+        public PageViewModel<Product> GetProductList(int page, string category)
         {
             var products = repository.CategoryProducts(category);
 
             int totalCount = products.Count();
 
-            products = repository.GetProductPage(page, PageSize);
+            products = repository.GetProductPage(page, PageSize, category);
 
             var pagingInfo = new PagingInfo
             {
@@ -51,11 +51,10 @@ namespace BuisnessLayer.Services
                 TotalItems = totalCount
             };
 
-            return new ProductsListViewModel
+            return new PageViewModel<Product>
             {
-                Products = products,
-                PagingInfo = pagingInfo,
-                CurrentCategory = category
+                PageData = products,
+                PagingInfo = pagingInfo
             };
         }
     }

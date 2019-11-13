@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BuisnessLayer.Services;
 using BuisnessLayer.Models;
+using BuisnessLayer.Entities;
 
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -23,7 +24,7 @@ namespace SportsStore.Api
         }
 
         [HttpGet("{page}/{category?}")]
-        public ProductsListViewModel Get(int page = 1, string category = null)
+        public PageViewModel<Product> Get(int page = 1, string category = null)
         {
             return productService.GetProductList(page, category);
         }

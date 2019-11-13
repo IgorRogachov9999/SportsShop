@@ -153,7 +153,7 @@ namespace SportsStore.Tests
             service.PageSize = PageSize;
             IEnumerable<Product> productsFromMock = repository.GetProductPage(page, PageSize);
 
-            ProductsListViewModel productList = service.GetProductList(page, category);
+            PageViewModel productList = service.GetProductList(page, category);
 
             Assert.Equal(productList.CurrentCategory, category);
             Assert.Equal(productList.PagingInfo.CurrentPage, page);

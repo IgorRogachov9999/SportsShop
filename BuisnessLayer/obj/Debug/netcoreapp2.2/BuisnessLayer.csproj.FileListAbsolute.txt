@@ -24,8 +24,8 @@ C:\Users\rogachov\Desktop\SportsShop-master\BuisnessLayer\obj\Debug\netcoreapp2.
 C:\Users\rogachov\Desktop\SportsStore\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.deps.json
 C:\Users\rogachov\Desktop\SportsStore\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.dll
 C:\Users\rogachov\Desktop\SportsStore\SportsShop\BuisnessLayer\bin\Debug\netcoreapp2.2\BuisnessLayer.pdb
-C:\Users\rogachov\Desktop\SportsStore\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.csprojAssemblyReference.cache
 C:\Users\rogachov\Desktop\SportsStore\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.AssemblyInfoInputs.cache
 C:\Users\rogachov\Desktop\SportsStore\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.AssemblyInfo.cs
 C:\Users\rogachov\Desktop\SportsStore\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.dll
 C:\Users\rogachov\Desktop\SportsStore\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.pdb
+C:\Users\rogachov\Desktop\SportsStore\SportsShop\BuisnessLayer\obj\Debug\netcoreapp2.2\BuisnessLayer.csprojAssemblyReference.cache

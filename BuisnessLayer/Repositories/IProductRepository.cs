@@ -18,7 +18,7 @@ namespace BuisnessLayer.Repositories
 
         IEnumerable<Product> CategoryProducts(string category);
 
-        IEnumerable<Product> GetProductPage(int page, int pageSize);
+        IEnumerable<Product> GetProductPage(int page, int pageSize, string category);
         
     }
 }

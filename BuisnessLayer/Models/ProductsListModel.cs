@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace BuisnessLayer.Models
 {
-    public class ProductsListViewModel
+    public class PageViewModel<T>
     {
-        public IEnumerable<Product> Products { get; set; }
+        public IEnumerable<T> PageData { get; set; }
 
         public PagingInfo PagingInfo { get; set; }
-
-        public string CurrentCategory { get; set; }
     }
 }

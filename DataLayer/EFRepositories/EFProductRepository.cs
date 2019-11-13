@@ -63,9 +63,10 @@ namespace DataLayer.EFRepositories
             return context.Products.Where(p => (category == null || p.ProductCategory == category) && p.IsEnable);
         }
 
-        public IEnumerable<Product> GetProductPage(int page, int pageSize)
+        public IEnumerable<Product> GetProductPage(int page, int pageSize, string category)
         {
             return context.Products
+                    .Where(p => (category == null || p.ProductCategory == category) && p.IsEnable)
                     .OrderBy(p => p.IsEnable)
                     .Skip((page - 1) * pageSize)
                     .Take(pageSize);
