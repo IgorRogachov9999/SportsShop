@@ -47,6 +47,8 @@ TestResults/
 *.rar
 *.tar
 *.zip
+ViewLayer
+SportsStore.Frontend
 ######################
 # Logs and databases #
 ######################
@@ -73,3 +75,6 @@ _[Ss]cripts
 *.nupkg
 *.ncrunchsolution
 *.dot[Cc]over
+.vs/
+bin/
+obj/
