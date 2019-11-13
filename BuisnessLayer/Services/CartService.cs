@@ -1,5 +1,5 @@
 ﻿using BuisnessLayer.Repositories;
-using BuisnessLayer.Entityes;
+using BuisnessLayer.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

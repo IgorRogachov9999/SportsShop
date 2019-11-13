@@ -1,4 +1,4 @@
-﻿using BuisnessLayer.Entityes;
+﻿using BuisnessLayer.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;

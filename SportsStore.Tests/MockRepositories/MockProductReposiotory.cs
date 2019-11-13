@@ -1,4 +1,4 @@
-﻿using BuisnessLayer.Entityes;
+﻿using BuisnessLayer.Entities;
 using BuisnessLayer.Repositories;
 using System;
 using System.Collections.Generic;

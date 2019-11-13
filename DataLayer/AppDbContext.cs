@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using BuisnessLayer.Entityes;
+using BuisnessLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

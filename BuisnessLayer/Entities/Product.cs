@@ -1,11 +1,11 @@
-﻿using BuisnessLayer.Entityes;
+﻿using BuisnessLayer.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BuisnessLayer.Entityes
+namespace BuisnessLayer.Entities
 {
     public class Product
     {

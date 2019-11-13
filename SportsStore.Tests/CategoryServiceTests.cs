@@ -5,7 +5,7 @@ using System.Linq;
 using Xunit;
 using BuisnessLayer.Services;
 using SportsStore.Tests.MockRepositories;
-using BuisnessLayer.Entityes;
+using BuisnessLayer.Entities;
 
 namespace SportsStore.Tests
 {

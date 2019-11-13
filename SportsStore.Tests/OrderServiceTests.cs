@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using BuisnessLayer.Entityes;
+using BuisnessLayer.Entities;
 using BuisnessLayer.Models;
 using BuisnessLayer.Services;
 using SportsStore.Tests.MockRepositories;

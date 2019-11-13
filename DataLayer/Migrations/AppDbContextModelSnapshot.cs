@@ -19,7 +19,7 @@ namespace DataLayer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("BuisnessLayer.Entityes.CartLine", b =>
+            modelBuilder.Entity("BuisnessLayer.Entities.CartLine", b =>
                 {
                     b.Property<int>("CartLineID")
                         .ValueGeneratedOnAdd()
@@ -40,7 +40,7 @@ namespace DataLayer.Migrations
                     b.ToTable("CartLine");
                 });
 
-            modelBuilder.Entity("BuisnessLayer.Entityes.Category", b =>
+            modelBuilder.Entity("BuisnessLayer.Entities.Category", b =>
                 {
                     b.Property<int>("CategoryID")
                         .ValueGeneratedOnAdd()
@@ -57,7 +57,7 @@ namespace DataLayer.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("BuisnessLayer.Entityes.Order", b =>
+            modelBuilder.Entity("BuisnessLayer.Entities.Order", b =>
                 {
                     b.Property<int>("OrderID")
                         .ValueGeneratedOnAdd()
@@ -78,7 +78,7 @@ namespace DataLayer.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("BuisnessLayer.Entityes.Product", b =>
+            modelBuilder.Entity("BuisnessLayer.Entities.Product", b =>
                 {
                     b.Property<int>("ProductID")
                         .ValueGeneratedOnAdd()
@@ -101,13 +101,13 @@ namespace DataLayer.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("BuisnessLayer.Entityes.CartLine", b =>
+            modelBuilder.Entity("BuisnessLayer.Entities.CartLine", b =>
                 {
-                    b.HasOne("BuisnessLayer.Entityes.Order")
+                    b.HasOne("BuisnessLayer.Entities.Order")
                         .WithMany("Lines")
                         .HasForeignKey("OrderID");
 
-                    b.HasOne("BuisnessLayer.Entityes.Product", "Product")
+                    b.HasOne("BuisnessLayer.Entities.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductID");
                 });

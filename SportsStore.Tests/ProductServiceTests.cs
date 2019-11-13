@@ -7,7 +7,7 @@ using System.Text;
 using Xunit;
 using SportsStore.Tests.MockRepositories;
 using System.Threading.Tasks;
-using BuisnessLayer.Entityes;
+using BuisnessLayer.Entities;
 using System.Linq;
 using BuisnessLayer.Models;
 

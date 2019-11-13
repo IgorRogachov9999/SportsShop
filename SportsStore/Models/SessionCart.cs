@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BuisnessLayer.Entityes;
+using BuisnessLayer.Entities;
 using BuisnessLayer.Models;
 using SportsStore.Infrastructure;
 

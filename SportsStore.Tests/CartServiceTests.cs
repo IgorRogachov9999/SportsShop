@@ -6,7 +6,7 @@ using Xunit;
 using SportsStore.Tests.MockRepositories;
 using BuisnessLayer.Services;
 using BuisnessLayer.Models;
-using BuisnessLayer.Entityes;
+using BuisnessLayer.Entities;
 
 namespace SportsStore.Tests
 {
