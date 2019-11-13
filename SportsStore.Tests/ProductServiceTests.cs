@@ -151,13 +151,13 @@ namespace SportsStore.Tests
             string category = products.FirstOrDefault(p => p.ProductID == id).ProductCategory;
             IEnumerable<Product> productsInCategory = products.Where(p => p.ProductCategory == category);
             service.PageSize = PageSize;
-            IEnumerable<Product> productsFromMock = repository.GetProductPage(page, PageSize);
+            IEnumerable<Product> productsFromMock = repository.GetProductPage(page, PageSize, category);
 
-            PageViewModel productList = service.GetProductList(page, category);
+            PageViewModel<Product> productList = service.GetProductList(page, category);
 
-            Assert.Equal(productList.CurrentCategory, category);
+            Assert.Equal(productList.PageData.ToList().First().ProductCategory, category);
             Assert.Equal(productList.PagingInfo.CurrentPage, page);
-            Assert.Equal(productList.Products, productsFromMock);
+            Assert.Equal(productList.PageData, productsFromMock);
         }
     }
 }
